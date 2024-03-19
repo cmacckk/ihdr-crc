@@ -30,7 +30,7 @@ rich_print(f"[green]{BANNER}[/green]")
 # 处理解析后的参数
 if args.output:
     ihdr, origin_crc, binary_data = read_png_info(args.image)
-    crack_ihdr_crc(ihdr, origin_crc, binary_data, current_path)
+    crack_ihdr_crc(ihdr, origin_crc, binary_data, current_path, args.output)
 else:
     out_filename = "out.png"
     ihdr, origin_crc, binary_data = read_png_info(args.image)
